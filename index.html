@@ -29,7 +29,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-<style>.resume-download{display:flex;justify-content:center;margin-top:28px;padding:0 16px}.resume-download a{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent-color);color:var(--contrast-color);padding:14px 24px;border-radius:6px;font-size:16px;font-weight:600;text-decoration:none;max-width:100%}.resume-download a:hover{opacity:.9}.resume-download a:focus-visible{outline:2px solid var(--default-color);outline-offset:4px}</style><style>#contact .info-wrap .info-item{min-width:0}#contact .info-wrap .info-item>div{min-width:0}#contact .info-wrap .info-item p{overflow-wrap:anywhere}</style></head>
+<style>.resume-download{display:flex;justify-content:center;margin-top:28px;padding:0 16px}.resume-download a{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent-color);color:var(--contrast-color);padding:14px 24px;border-radius:6px;font-size:16px;font-weight:600;text-decoration:none;max-width:100%}.resume-download a:hover{opacity:.9}.resume-download a:focus-visible{outline:2px solid var(--default-color);outline-offset:4px}</style><style>#contact .info-wrap .info-item{min-width:0}#contact .info-wrap .info-item>div{min-width:0}#contact .info-wrap .info-item p{overflow-wrap:anywhere}</style><style id="portrait-update">#hero>img{object-position:50% 10%}#about .profile-photo{height:300px!important;object-fit:cover;object-position:50% 20%}</style><style id="hero-split-layout">
+#hero{display:grid;grid-template-columns:1fr 1fr;min-height:620px;padding:0;background:#050505;isolation:isolate}#hero:before{display:none}#hero .hero-copy{padding:70px 0 70px max(28px,10vw);display:flex;flex-direction:column;justify-content:center;position:relative;z-index:3}#hero .hero-eyebrow{font-size:12px;letter-spacing:3px;color:#e95160;margin-bottom:22px}#hero h2{font-size:clamp(40px,5vw,68px);line-height:1.08;letter-spacing:-2px;margin:0 0 24px;font-weight:700}#hero p{color:#bcbcbc;font-size:20px;line-height:1.6;margin:0;max-width:360px;font-weight:400}#hero .hero-rule{width:44px;height:3px;background:#df1529;margin-top:32px}#hero .hero-photo{position:relative;min-height:620px}#hero .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 14%;z-index:1}#hero .hero-photo:after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.35) 24%,rgba(5,5,5,.12) 70%),linear-gradient(0deg,#050505 0%,transparent 28%)}#about .about-info p{margin-bottom:20px;overflow-wrap:anywhere}
+@media(max-width:767px){#hero{grid-template-columns:1fr;min-height:0}#hero .hero-copy{padding:48px 28px 18px}#hero h2{font-size:42px}#hero p{font-size:18px}#hero .hero-photo{min-height:460px}#hero .hero-photo img{object-position:center 20%}#hero .hero-photo:after{background:linear-gradient(180deg,#050505 0%,transparent 20%,rgba(5,5,5,.1) 65%,#050505 100%)}}
+</style><style id="hero-text-animation">
+#hero .hero-roles{display:grid;position:relative;width:100%;min-height:2em}#hero .hero-role{grid-area:1/1;opacity:0;clip-path:inset(0 100% 0 0);width:max-content;max-width:100%;animation:pedro-role-cycle 16s steps(25,end) infinite;white-space:nowrap}#hero .hero-role:nth-child(2){animation-delay:4s}#hero .hero-role:nth-child(3){animation-delay:8s}#hero .hero-role:nth-child(4){animation-delay:12s}
+@keyframes pedro-role-cycle{0%{opacity:1;clip-path:inset(0 100% 0 0)}12.5%,18.75%{opacity:1;clip-path:inset(0 0 0 0)}24.9%{opacity:1;clip-path:inset(0 100% 0 0)}25%,100%{opacity:0;clip-path:inset(0 100% 0 0)}}
+@media(prefers-reduced-motion:reduce){#hero .hero-role{animation-name:pedro-role-swap;clip-path:none}}
+</style>
+<style id="navigation-red-fix">.navmenu>ul>li>a:before{background-color:#df1529!important}#hero .hero-roles{display:block;min-height:3.2em;overflow-wrap:normal}#hero .hero-role{white-space:normal;width:auto}@keyframes pedro-role-swap{0%,24.9%{opacity:1}25%,100%{opacity:0}}</style></head>
 <body class="index-page">
 <header class="header d-flex align-items-center sticky-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -53,22 +61,17 @@
 <main class="main">
 <!-- Hero Section -->
 <section class="hero section dark-background" id="hero">
-<img alt="Foto de Pedro Mendes Pattaro" data-aos="fade-in" src="assets/img/minha-foto-portifolio.jpeg"/>
-<div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-<h2>Pedro Mendes Pattaro</h2>
-<p><span class="typed" data-typed-items="Estudante, Desenvolvedor, Suporte de TI, Auxiliar Administrativo"></span></p>
-</div>
+<div class="hero-copy" data-aos="fade-up"><div class="hero-eyebrow">TECNOLOGIA &amp; DESENVOLVIMENTO</div><h2>Pedro Mendes<br/>Pattaro</h2><p class="hero-roles" aria-label="Estudante de Sistemas de Informação, Desenvolvedor, Suporte de TI e Auxiliar Administrativo"><span class="hero-role" aria-hidden="true">Estudante de Sistemas de Informação</span><span class="hero-role" aria-hidden="true">Desenvolvedor</span><span class="hero-role" aria-hidden="true">Suporte de TI</span><span class="hero-role" aria-hidden="true">Auxiliar Administrativo</span></p><div class="hero-rule"></div></div>
+<div class="hero-photo"><img alt="Pedro Mendes Pattaro, de terno preto, sorrindo" src="assets/img/pedro-pattaro-atual.png?v=hero-20261001"/></div>
 </section><!-- /Hero Section -->
 <!-- About Section -->
 <section class="about section" id="about">
 <div class="container" data-aos="fade-up" data-aos-delay="100">
 <div class="row gy-4">
-<div class="col-md-6">
+<div class="col-lg-6">
 <div class="row justify-content-between gy-4">
-<div class="col-lg-5">
-<img alt="Foto de Pedro Mendes Pattaro" class="img-fluid profile-photo" src="assets/img/minha-foto-portifolio.jpeg"/>
-</div>
-<div class="col-lg-7 about-info">
+
+<div class="col-12 about-info">
 <p><strong>Nome: </strong> <span>Pedro Mendes Pattaro</span></p>
 <p><strong>Perfil: </strong> <span>Estudante de Sistemas de Informação - Auxiliar Administrativo / Suporte de TI</span></p>
 <p><strong>Email: </strong> <span>pedrompattaro@gmail.com</span></p>
@@ -365,5 +368,39 @@
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
-</body>
+<script id="hero-text-runtime">(function () {
+  function startHeroText() {
+    const host = document.querySelector('#hero .hero-roles');
+    if (!host || host.dataset.running === 'true') return;
+    host.dataset.running = 'true';
+    const labels = ['Estudante de Sistemas de Informação', 'Desenvolvedor', 'Suporte de TI', 'Auxiliar Administrativo'];
+    host.textContent = labels[0];
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let index = 0;
+    if (reduced) {
+      setInterval(function () { index = (index + 1) % labels.length; host.textContent = labels[index]; }, 3000);
+      return;
+    }
+    let length = labels[0].length;
+    let removing = true;
+    function tick() {
+      const label = labels[index];
+      if (removing) {
+        length--;
+        host.textContent = label.slice(0, Math.max(0, length));
+        if (length <= 0) { index = (index + 1) % labels.length; removing = false; setTimeout(tick, 250); }
+        else setTimeout(tick, 45);
+      } else {
+        length++;
+        host.textContent = label.slice(0, length);
+        if (length >= label.length) { removing = true; setTimeout(tick, 1800); }
+        else setTimeout(tick, 85);
+      }
+    }
+    setTimeout(tick, 1800);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', startHeroText);
+  else startHeroText();
+})();
+</script></body>
 </html>
